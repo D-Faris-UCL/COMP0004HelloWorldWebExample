@@ -2,26 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odyssey App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #7f8c8d;
+      margin-bottom: 30px;
+    }
+
+    .navigation-cards {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 280px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .card-icon {
+      height: 120px;
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #3498db;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #2c3e50;
+    }
+
+    .card p {
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+
+    .card-link {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background-color: #3498db;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .card-link:hover {
+      background-color: #2980b9;
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <h2>Hello World!</h2>
-  <p>This is a standard html web page with no dynamic content. It can be accessed via:
-  <ul>
-    <li><a href="http://localhost:8080">http://localhost:8080</a>, the default index.html page for the website.</li>
-    <li>or, <a href="http://localhost:8080/index.html">http://localhost:8080/index.html</a>
-      if the index.html document name is included in the URL.
-    </li>
-  </ul>
-  <p>These links invoke the Java Servlet and Java Server Page (JSP) examples:</p>
-  <ul>
-    <li><a href="/helloworldservlet.html">Java Servlet</a>. The document name hello.html is mapped to the
-      servlet called HelloWorldServlet, which dynamically creates the actual html document.
-    </li>
-    <li><a href="/helloworldservletandjsp.html">Java Servlet and JSP</a>. The document name helloworldservletandjsp.html is
-      mapped to the servlet HelloWorldServletAndJSP, which uses the helloworld.jsp file to dynamically
-      display a message.
-    </li>
-  </ul>
+<div class="container">
+  <header>
+    <h1>Odyssey Notes</h1>
+    <div class="subtitle">Create and manage your personal notes with ease</div>
+  </header>
+
+  <div class="navigation-cards">
+    <div class="card">
+      <div class="card-icon">
+        ✏️
+      </div>
+      <div class="card-content">
+        <h2>Notes Editor</h2>
+        <p>Create and edit simple markdown files with the editor.</p>
+        <a href="editor" class="card-link">Open Editor</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        🔍
+      </div>
+      <div class="card-content">
+        <h2>File Search</h2>
+        <p>Find and sort your files quickly and efficiently.</p>
+        <a href="search" class="card-link">Search Files</a>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
